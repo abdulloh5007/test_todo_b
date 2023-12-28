@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const { v4: uuidv4 } = require('uuid');
+const PORT = 3000
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://my-todo-l1st.netlify.app');
@@ -70,6 +70,6 @@ app.delete('/delete', (req, res) => {
 });
 
 
-// app.listen(3000, () => {
-//     console.log('Server is running on port 3000');
-// });
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
